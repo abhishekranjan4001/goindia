@@ -10,8 +10,8 @@ module.exports = {
     ...defaultTheme,
     colors: {
       ...defaultTheme.colors,
+      goindiaRed: '#BC222F',
       primary: "#3B81F6",
-      white: '#ffffff',
       text: {
         DEFAULT: "#1F2937",
         light: "#6C7281",

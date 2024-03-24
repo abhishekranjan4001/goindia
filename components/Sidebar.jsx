@@ -3,20 +3,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useMemo } from "react";
 import {
-  ArticleIcon,
   CollapsIcon,
   HomeIcon,
   LogoIcon,
   LogoutIcon,
-  UsersIcon,
-  VideosIcon,
 } from "./icons";
 
 const menuItems = [
   { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Manage Posts", icon: ArticleIcon, link: "/posts" },
-  { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
-  { id: 4, label: "Manage Tutorials", icon: VideosIcon, link: "/tutorials" },
 ];
 
 const Sidebar = () => {
@@ -31,7 +25,7 @@ const Sidebar = () => {
   );
 
   const wrapperClasses = classNames(
-    "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
+    "h-screen px-4 pt-8 pb-4 bg-light	 flex justify-between flex-col",
     {
       ["w-80"]: !toggleCollapse,
       ["w-20"]: toggleCollapse,
@@ -78,7 +72,7 @@ const Sidebar = () => {
                 hidden: toggleCollapse,
               })}
             >
-              Logo
+              Username
             </span>
           </div>
           {isCollapsible && (
