@@ -25,10 +25,10 @@ const Sidebar = () => {
   );
 
   const wrapperClasses = classNames(
-    "h-screen px-4 pt-8 pb-4 bg-light	 flex justify-between flex-col",
+    "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
     {
-      ["w-80"]: !toggleCollapse,
-      ["w-20"]: toggleCollapse,
+      "w-80": !toggleCollapse,
+      "w-20": toggleCollapse,
     }
   );
 
@@ -43,7 +43,7 @@ const Sidebar = () => {
     return classNames(
       "flex items-center cursor-pointer hover:bg-light-lighter rounded w-full overflow-hidden whitespace-nowrap",
       {
-        ["bg-light-lighter"]: activeMenu.id === menu.id,
+        "bg-light-lighter": activeMenu && activeMenu.id === menu.id,
       }
     );
   };
@@ -89,7 +89,7 @@ const Sidebar = () => {
           {menuItems.map(({ icon: Icon, ...menu }) => {
             const classes = getNavItemClasses(menu);
             return (
-              <div className={classes}>
+              <div key={menu.id} className={classes}>
                 <Link href={menu.link}>
                   <a className="flex py-4 px-3 items-center w-full h-full">
                     <div style={{ width: "2.5rem" }}>
