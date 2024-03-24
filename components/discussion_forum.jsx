@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 
 const DiscussionForum = () => {
@@ -38,7 +39,15 @@ const DiscussionForum = () => {
           <div className="p-4">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center">
-                <div className="w-8 h-8 rounded-full mr-2"><img src="https://cdn.vectorstock.com/i/500p/20/76/man-avatar-profile-vector-21372076.jpg" alt="Profile" className="w-full h-full rounded-full" /></div>
+                <div className="w-8 h-8 rounded-full mr-2">
+                  <Image 
+                    src="https://cdn.vectorstock.com/i/500p/20/76/man-avatar-profile-vector-21372076.jpg" 
+                    alt="Profile" 
+                    width={32} // Adjust width according to your design
+                    height={32} // Adjust height according to your design
+                    className="w-full h-full rounded-full" 
+                  />
+                  </div>
                 <span className="text-gray-800 font-bold">{post.username}</span>
               </div>
               <span className="text-blue-500 text-sm">{post.timestamp}</span>

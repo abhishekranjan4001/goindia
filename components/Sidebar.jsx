@@ -1,4 +1,6 @@
 import classNames from "classnames";
+import Image from "next/image";
+
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useMemo } from "react";
