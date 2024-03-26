@@ -1,3 +1,5 @@
+This project is an assignment given by one of the finance company of goIndia Stock for the front end role.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
